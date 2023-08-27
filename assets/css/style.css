@@ -564,6 +564,7 @@ main {
 
 .cv-btn-group {
     display: flex;
+    text-align: center;
 }
 
 .btn.btn-primary.download-cv-btn {
@@ -711,7 +712,7 @@ main {
 
 .card-banner:is(:hover, :focus)::after, .card-content:is(:hover :focus) .card-banner::after {
     background: hsla(0, 0%, 100%, 0.2);
-    backdrop-filter: blur(0.7px);
+    backdrop-filter: blur(0.5px);
 }
 
 .project-card .card-content {
@@ -892,6 +893,13 @@ main {
 /* Larger than 768px  */
 
 @media (min-width: 768px) {
+
+
+    /* HERO*/
+    
+    .hero-content {
+        max-width: 500px;
+    }
 
     /* REUSABLE STYLE */
 
@@ -1120,6 +1128,10 @@ main {
   
   
     /* HERO */
+
+    .hero-content {
+        max-width: 700px;
+    }
     
     .hero-social-list { 
         left: -65px; 
