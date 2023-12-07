@@ -31,7 +31,7 @@ function showScale(scale) {
 }
 
 function handleClickOnce(event) {
-    const tone = event.target.textContent.trim();
+    const tone = event.target.querySelector('.h3').textContent.trim();
     const scale = generateScale(tone);
 
     boxBtns.forEach(function(botao) {
@@ -56,7 +56,6 @@ function handleClickOnce(event) {
 boxBtns.forEach(function(botao) {
     botao.addEventListener('click', handleClickOnce);
 });
-
 
 resetBtn.addEventListener('click', function() {
     window.location.reload(true);
