@@ -30,25 +30,31 @@ function showScale(scale) {
     });
 }
 
+function handleClickOnce(event) {
+    const tone = event.target.textContent.trim();
+    const scale = generateScale(tone);
+
+    boxBtns.forEach(function(botao) {
+        botao.removeEventListener('click', handleClickOnce);
+    });
+
+    skillsBox.classList.toggle("active");
+    skillCards.forEach(function(card) {
+        card.classList.toggle("active");
+    });
+    sectionTitle.classList.toggle("active");
+    sectionText.classList.toggle("active");
+    resetBtn.classList.toggle("active");
+
+    showSectionContent(tone);
+    showScale(scale);
+}
 /**
  * event listeners
  */
 
 boxBtns.forEach(function(botao) {
-    botao.addEventListener('click', function() {
-        const tone = botao.textContent.trim();
-        const scale = generateScale(tone);
-        skillsBox.classList.toggle("active");
-        skillCards.forEach(function(card) {
-            card.classList.toggle("active");
-
-        });
-        sectionTitle.classList.toggle("active");
-        sectionText.classList.toggle("active");
-        resetBtn.classList.toggle("active");
-        showSectionContent(tone);
-        showScale(scale);
-    });
+    botao.addEventListener('click', handleClickOnce);
 });
 
 

@@ -684,8 +684,7 @@ main {
     cursor: pointer;
 }
 .skill-card.active {
-    pointer-events: none;
-    cursor: not-allowed;
+    cursor: default;
 }
 
 .skills-box.active, .skills-list.active{
@@ -712,9 +711,13 @@ main {
 
 }
 
-.skill-card:hover .tooltip {
+.skill-card.active:hover .tooltip {
     opacity: 1;
     transform: translateY(-60px);
+}
+
+.skill-card:hover {
+    box-shadow: var(--shadow-2);
 }
 
 
