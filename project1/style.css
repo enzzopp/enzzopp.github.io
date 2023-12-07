@@ -600,7 +600,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Adicionado para garantir o alinhamento vertical */
+    /* height: 100%; Adicionado para garantir o alinhamento vertical */
     animation: fadeIn 1s ease-in-out forwards;
 }
 

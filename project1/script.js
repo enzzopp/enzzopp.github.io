@@ -98,3 +98,20 @@ if (localStorage.getItem("theme") === "dark_theme") {
     document.body.classList.add("dark_theme");
 }
 
+/**
+ * header sticky & go to top
+ */
+
+const header = document.querySelector("[data-header]");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY >= 10) {
+        header.classList.add("active");
+    } 
+    
+    else {
+        header.classList.remove("active");
+    }
+
+});
