@@ -601,10 +601,15 @@ main {
     justify-content: center;
     align-items: center;
     animation: fadeIn 1s ease-in-out forwards;
-    -webkit-user-select: none; /* Para navegadores baseados no WebKit, como o Safari e o Chrome */
-    -moz-user-select: none; /* Para navegadores baseados no Gecko, como o Firefox */
-    -ms-user-select: none; /* Para o Internet Explorer/Edge */
-    touch-action: none; /* Desativa as ações de toque (pode não ser suportado em todos os navegadores) */
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
 
