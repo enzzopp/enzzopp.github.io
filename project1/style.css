@@ -298,10 +298,8 @@ body {
 }
 
 .header.active {
-    padding-block: 12px;
-    background: var(--bg-secondary);
-    box-shadow: var(--shadow-1);
-    display: none;
+    transition: 1s;
+    opacity: 0;
 }
 
 .header .container {
