@@ -3,6 +3,7 @@ import { generateScale, generateHarmonicField } from './functions.js';
 const skillsBox = document.querySelector("[data-skills-box]");
 const skillCards = document.querySelectorAll(".skill-card");
 const boxBtns = document.querySelectorAll('[id^="box-button"]');
+const boxContent = document.querySelectorAll('[id^="box-content"]');
 const resetBtn = document.querySelector("[data-reset-btn]");
 const sectionTitle = document.getElementById("section-title");
 const sectionText = document.getElementById("section-text");
@@ -55,6 +56,13 @@ function handleClickOnce(event) {
 
 boxBtns.forEach(function(botao) {
     botao.addEventListener('click', handleClickOnce);
+});
+
+boxContent.forEach(function(botao) {
+    botao.addEventListener('click', function() {
+        console.log(botao.parentElement.parentElement.click());
+        console.log('ee');
+    });
 });
 
 resetBtn.addEventListener('click', function() {

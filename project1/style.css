@@ -622,7 +622,7 @@ main {
     display: flex;
 }
 
-.skills > div:nth-child(2) {
+.skills > div:nth-child(-n+3) {
     margin-bottom: 50px;
 }
 
