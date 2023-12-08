@@ -300,6 +300,7 @@ body {
 .header.active {
     transition: 0.5s;
     opacity: 0;
+    pointer-events: none;
 }
 
 .header .container {
