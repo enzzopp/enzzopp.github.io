@@ -298,7 +298,7 @@ body {
 }
 
 .header.active {
-    transition: 1s;
+    transition: 0.5s;
     opacity: 0;
 }
 
