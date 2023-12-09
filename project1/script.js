@@ -1,4 +1,4 @@
-import { generateScale, generateHarmonicField } from './functions.js';
+import { generateScale, generateHarmonicField, toneToWord } from './functions.js';
 
 const skillsBox = document.querySelector("[data-skills-box]");
 const skillCards = document.querySelectorAll(".skill-card");
@@ -17,14 +17,13 @@ const sectionText = document.getElementById("section-text");
  */
 
 function showSectionContent(tone) {
-    sectionTitle.textContent = `Escala de ${tone} Maior`;
-    sectionText.textContent = `Os acordes de ${tone} Maior são formados pelas seguintes notas:`
+    let word = toneToWord(tone);
+    sectionTitle.textContent = `Escala de ${word} Maior (${tone})`;
+    sectionText.textContent = `A escala de ${word} Maior é formada pelas seguintes notas:`
 }
 
 function showScale(scale) {
-    const boxesContent = document.querySelectorAll('[id^="box-content"]');
-    
-    boxesContent.forEach(function(box, index) {
+    boxContent.forEach(function(box, index) {
         if (scale[index]) {
             box.textContent = scale[index];
         }
@@ -50,6 +49,7 @@ function handleClickOnce(event) {
     showSectionContent(tone);
     showScale(scale);
 }
+
 /**
  * event listeners
  */
@@ -60,8 +60,7 @@ boxBtns.forEach(function(botao) {
 
 boxContent.forEach(function(botao) {
     botao.addEventListener('click', function() {
-        console.log(botao.parentElement.parentElement.click());
-        console.log('ee');
+        botao.parentElement.parentElement.click();
     });
 });
 
@@ -97,6 +96,36 @@ themeToggleBtn.addEventListener("click", function () {
 });
 
 /**
+ * toggle skills btn
+ */
+
+
+const modeToggleBtns = document.querySelectorAll("[data-toggle-btns]");
+const modeToggleBox = document.querySelector("[data-toggle-box]");
+
+modeToggleBox.addEventListener("click", function () {
+
+    for (let i = 0; i < modeToggleBtns.length; i++) { 
+        modeToggleBtns[i].classList.toggle("active");
+    }
+
+    modeToggleBox.classList.toggle("active");
+    skillsBox.classList.toggle("active");
+
+    if (modeToggleBox.classList.contains("active")) {
+        boxContent.forEach(function(box, index) {
+            box.textContent = box.textContent + 'm';
+        });
+    } 
+    else {
+        boxContent.forEach(function(box, index) {
+            box.textContent = box.textContent.replace('m', '');
+        });
+    }
+
+});
+
+/**
  * check & apply last time selected theme from localStorage
  */
 
@@ -123,3 +152,4 @@ window.addEventListener("scroll", function () {
     }
 
 });
+

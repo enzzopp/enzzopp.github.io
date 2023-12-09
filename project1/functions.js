@@ -28,6 +28,26 @@ export function generateScale(tone) {
     return scale;
 }
 
+export function toneToWord(tone) {
+    const dicionarioNotas = {
+        'C': 'Dó',
+        'C#': 'Dó Sustenido',
+        'D': 'Ré',
+        'D#': 'Ré Sustenido',
+        'E': 'Mi',
+        'F': 'Fá',
+        'F#': 'Fá Sustenido',
+        'G': 'Sol',
+        'G#': 'Sol Sustenido',
+        'A': 'Lá',
+        'A#': 'Lá Sustenido',
+        'B': 'Si'
+    };
+    
+    return dicionarioNotas[tone];
+    
+}
+
 export function generateHarmonicField(scale) {
     const minorInterval = [1, 2, 5, 6];
     const harmonicField = [...scale];

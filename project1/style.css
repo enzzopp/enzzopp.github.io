@@ -618,6 +618,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-inline: auto;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .reset-btn.active {
@@ -631,6 +632,10 @@ main {
 
 .section-text.active, .h3.active, .reset-btn {
     animation: fadeIn 1s ease-in-out forwards;
+}
+
+.toggle-container {
+    /* display: flex; */
 }
 
 .skills-toggle {
@@ -650,7 +655,7 @@ main {
     content: "";
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 8px;
     bottom: 5px;
     width: 93px;
     background: var(--main-color);
@@ -660,7 +665,7 @@ main {
 }
 
 .skills-toggle.active::before {
-    left: 98px;
+    left: 106px;
     width: 94px;
 }
 
@@ -695,7 +700,7 @@ main {
 }
 
 .skills-box.active, .skills-list.active{
-    animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 1s ease-in forwards;
 }
 
 
