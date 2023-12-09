@@ -45,6 +45,7 @@ function handleClickOnce(event) {
     sectionTitle.classList.toggle("active");
     sectionText.classList.toggle("active");
     resetBtn.classList.toggle("active");
+    modeToggleBox.style.display = 'none';
 
     showSectionContent(tone);
     showScale(scale);
