@@ -714,7 +714,9 @@ main {
     position: relative;
     background: var(--bg-secondary);
     width: 80px;
+    min-width: max-content;
     height: 80px;
+    padding: 10px;
     display: grid;
     place-items: center;
     border-radius: 12px;
