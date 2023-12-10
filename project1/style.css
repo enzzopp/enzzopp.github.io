@@ -246,14 +246,13 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 60px;
+    width: 90px;
     height: 2px;
     background: var(--color-secondary);
 }
 
 .section-title {
     max-width: 350px;
-    /* margin-bottom: 30px; */
 }
 
 .section-text {
@@ -288,7 +287,7 @@ body {
 
 .header {
     padding-block: 15px;
-    position: static;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -721,6 +720,11 @@ main {
     border-radius: 12px;
     box-shadow: var(--shadow-1);
 
+}
+
+.skill-card.active:not(.triad) {
+    background: none;
+    transition: var(--transition-1);
 }
 
 .skill-card.active:hover .tooltip {

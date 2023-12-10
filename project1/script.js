@@ -18,8 +18,8 @@ const sectionText = document.getElementById("section-text");
 
 function showSectionContent(tone) {
     let word = toneToWord(tone);
-    sectionTitle.textContent = `Escala de ${word} Maior (${tone})`;
-    sectionText.textContent = `A escala de ${word} Maior é formada pelas seguintes notas:`
+    sectionTitle.textContent = `Escala de ${word} (${tone})`;
+    sectionText.textContent = `A escala de ${word} é formada pelas seguintes notas:`
 }
 
 function showScale(scale) {

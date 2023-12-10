@@ -1,6 +1,8 @@
 export function generateScale(tone) {
     const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
-    const intervals = [2, 2, 1, 2, 2, 2, 1];
+    const intervals = (tone.includes('m')) ? [2, 1, 2, 2, 1, 2, 2] : [2, 2, 1, 2, 2, 2, 1];
+
+    tone = tone.replace('m', '');
 
     if (!notes.includes(tone.toUpperCase())) {
         console.log('Invalid tone');
@@ -30,18 +32,35 @@ export function generateScale(tone) {
 
 export function toneToWord(tone) {
     const dicionarioNotas = {
-        'C': 'Dó',
-        'C#': 'Dó Sustenido',
-        'D': 'Ré',
-        'D#': 'Ré Sustenido',
-        'E': 'Mi',
-        'F': 'Fá',
-        'F#': 'Fá Sustenido',
-        'G': 'Sol',
-        'G#': 'Sol Sustenido',
-        'A': 'Lá',
-        'A#': 'Lá Sustenido',
-        'B': 'Si'
+        'C': 'Dó Maior',
+        'C#': 'Dó# Maior',
+        'Db': 'Réb Maior',
+        'D': 'Ré Maior',
+        'D#': 'Ré# Maior',
+        'Eb': 'Mib Maior',
+        'E': 'Mi Maior',
+        'F': 'Fá Maior',
+        'F#': 'Fá# Maior',
+        'Gb': 'Solb Maior',
+        'G': 'Sol Maior',
+        'G#': 'Sol# Maior',
+        'Ab': 'Láb Maior',
+        'A': 'Lá Maior',
+        'A#': 'Lá# Maior',
+        'Bb': 'Sib Maior',
+        'B': 'Si Maior',
+        'Cm': 'Dó Menor',
+        'C#m': 'Dó# Menor',
+        'Dm': 'Ré Menor',
+        'D#m': 'Ré# Menor',
+        'Em': 'Mi Menor',
+        'Fm': 'Fá Menor',
+        'F#m': 'Fá# Menor',
+        'Gm': 'Sol Menor',
+        'G#m': 'Sol# Menor',
+        'Am': 'Lá Menor',
+        'A#m': 'Lá# Menor',
+        'Bm': 'Si Menor'
     };
     
     return dicionarioNotas[tone];
