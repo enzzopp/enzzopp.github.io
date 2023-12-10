@@ -143,13 +143,13 @@ select {
 html {
     scroll-behavior: smooth;
     font-family: var(--ff-roboto);
-    height: 100%;
+    /* height: 100%; */
 }
 
 body {
     background: var(--bg-primary);
     transition: var(--transition-1);
-    height: 100%;
+    /* height: 100%; */
 }
 
 /* -------------------------- */
