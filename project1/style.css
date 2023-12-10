@@ -38,7 +38,7 @@
 
     /* spacing */
 
-    --section-padding: 80px;
+    --section-padding: 50px;
     --section-padding-inline: 30px;
 
 }
@@ -608,6 +608,7 @@ main {
     -ms-user-select:none;
     user-select:none;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
+    /* height: 100%; */
 }
 
 
