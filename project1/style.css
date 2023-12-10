@@ -721,11 +721,11 @@ main {
     box-shadow: var(--shadow-1);
 
 }
-
+/* 
 .skill-card.active:not(.triad) {
     background: none;
     transition: var(--transition-1);
-}
+} */
 
 .skill-card.active:hover .tooltip {
     opacity: 1;
