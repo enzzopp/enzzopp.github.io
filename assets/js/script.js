@@ -122,4 +122,4 @@ if (localStorage.getItem("theme") === "dark_theme") {
  */
 
 data = new Date();
-document.querySelector("[data-copyright]").innerHTML = "&copy;" + data.getFullYear() + " <a href='#'>Enzo</a>. Todos os direitos reservados.";
+document.querySelector("[data-copyright]").innerHTML = "&copy;" + " Enzo Porfirio. " + data.getFullYear() + " - Todos os direitos reservados.";
