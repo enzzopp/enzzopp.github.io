@@ -1,3 +1,7 @@
+/**alert pagina em desenvolviemento */
+
+alert("Página em desenvolvimento! \n\nAinda estou trabalhando nela, mas você pode acompanhar o progresso. \n\nObrigado!");
+
 /**
  * element toggle function
 */
