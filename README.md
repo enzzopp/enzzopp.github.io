@@ -14,7 +14,7 @@
 </p>
 
 <p align="left">
-  📩 Fique à vontade para me contatar nas redes abaixo: ⤵️
+  📩 Fique à vontade para me contatar nas redes abaixo:
 </p>
 
 <p align="left">
