@@ -123,9 +123,3 @@ if (localStorage.getItem("theme") === "dark_theme") {
 
 data = new Date();
 document.querySelector("[data-copyright]").innerHTML = "&copy;" + " Enzo Porfirio. " + data.getFullYear() + " - Todos os direitos reservados.";
-
-/**
-    * alert
-*/
-
-alert("Página em desenvolvimento! \n\nAinda estou trabalhando nela, mas você pode acompanhar o progresso. \n\nObrigado!");
