@@ -11,7 +11,7 @@
     --yellow-sun: #f9d81a;
     --black: #000000;
     --white: #ffffff;
-
+    
 
     /* fonts */
 
@@ -59,6 +59,8 @@ body.light_theme {
     
     --shadow-1: 10px 10px 40px var(--card-shadow-1);
     --shadow-2: 10px 10px 40px var(--card-shadow-2);
+
+    --main-filter: invert(27%) sepia(99%) saturate(1440%) hue-rotate(180deg) brightness(85%) contrast(101%);
     
 }
 
@@ -75,6 +77,8 @@ body.dark_theme {
     
     --shadow-1: 10px 10px 40px var(--card-shadow-4);
     --shadow-2: 10px 10px 40px var(--card-shadow-2);
+
+    --main-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
   
 }
 
@@ -580,6 +584,13 @@ main {
 .stats-card .card-icon img {
   width: 150%;
 }
+
+/* Definindo a cor padrão para azul */
+.svg-image {
+    filter: var(--main-filter);
+}
+  
+  
 
 .stats-card .card-title {
   width: calc(100% - 95px);
