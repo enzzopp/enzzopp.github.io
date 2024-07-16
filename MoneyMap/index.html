@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>MoneyMap</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-title">
+          <img src="assets/logo.png" alt="Logo" width="64">
+          <h1 id="headerTitle">MoneyMap</h1>
+      </div>
+      <p id="monthTitle"></p>
+
+      <div class="fab-container">
+        <button class="fab" id="fab">
+          <span>+</span>
+        </button>
+        <div class="fab-options" id="fab-options">
+          <button class="fab-option">Opção 1</button>
+          <button class="fab-option">Opção 2</button>
+          <button class="fab-option">Opção 3</button>
+          <button class="fab-option">Opção 4</button>
+          <button class="fab-option">Opção 5</button>
+        </div>
+      </div>
+      
+    </header>
+
+    <main class="container">
+      <section id="balance">
+        <h2 class="sr-only">Balanço</h2>
+
+        <div class="card">
+          <h3>
+            <span>Receitas</span>
+            <img src="./assets/income.svg" alt="Image de Receitas" />
+          </h3>
+          <p class="incomeDisplay"></p>
+        </div>
+        
+        <div class="card">
+          <h3>
+            <span>Despesas</span>
+            <img src="./assets/expense.svg" alt="Image de Despesas" />
+          </h3>
+          <p class="expenseDisplay"></p>
+        </div>
+
+        <div class="card">
+            <h3>
+                <span>Pendentes</span>
+                <img src="./assets/card.svg" alt="Imagem de pendências" width="32"/>
+            </h3>
+            <p class="pendingDisplay"></p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span>Total Gasto</span>
+            <img id="totalImage" src="./assets/total.svg" alt="Imagem de Cifrão" />
+          </h3>
+          <p class="totalDisplay"></p>
+        </div>
+
+    </section>
+
+    <section id="transaction">
+        <h2 class="sr-only">Registros</h2>
+        <a href="#" class="button new" data-modal="button">+ Novo Registro</a>
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th id="descriptionTitle">Descrição</th>
+              <th id="valueTitle">Valor</th>
+              <th id="typeTitle">Tipo</th>
+              <th id="categoryTitle">Categoria</th>
+              <th id="dataTitle">Data</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div class="modal-overlay" data-modal="modal">
+      <div class="modal">
+        <div class="modal-form" id="form">
+          <h2 id="modal-title">Novo Registro</h2>
+          <form action="">
+            <div class="input-group">
+              <label class="sr-only" for="description">Descrição</label>
+              <input
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Descrição"
+              />
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="amount">Valor</label>
+              <input
+                type="number"
+                step="0.01"
+                id="amount"
+                name="amount"
+                placeholder="0,00"
+              />
+            </div>
+            
+            <div class="input-group">
+              <label class="sr-only" for="category">Categoria</label>
+              <input
+              type="text"
+              id="category"
+              name="category"
+              placeholder="Categoria"
+              list="category-options"
+              />
+              <datalist id="category-options">
+                <option value="Alimentação"></option>
+                <option value="Educação"></option>
+                <option value="Lazer"></option>
+                <option value="Saúde"></option>
+                <option value="Transporte"></option>
+                <option value="Outros"></option>
+              </datalist>
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="date">Data</label>
+              <input type="date" id="date" name="date"/>
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="type">Tipo</label>
+              <p class="type-title">Tipo</p>
+              <div class="type-buttons">
+                <button type="button" class="type-button" data-type="income">Receita</button>
+                <button type="button" class="type-button" data-type="expense">Despesa</button>
+                <button type="button" class="type-button" data-type="pending">Pendente</button>
+              </div>
+              <input type="hidden" id="type" name="type" />
+            </div>
+
+            
+            <div class="input-group actions">
+              <a href="#" class="button cancel" id="cancel">Cancelar</a>
+              <button id="save">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>MoneyMap</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
