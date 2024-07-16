@@ -88,6 +88,10 @@ button:hover {
   outline: none;
 }
 
+img:focus {
+  outline: none;
+}
+
 button, a, input, textarea {
   -webkit-tap-highlight-color: transparent;
 }
