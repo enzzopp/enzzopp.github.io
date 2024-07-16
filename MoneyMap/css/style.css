@@ -84,6 +84,14 @@ button:hover {
   background-color: var(--light-green);
 }
 
+*:focus {
+  outline: none;
+}
+
+button, a, input, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .button.new {
   display: inline-block;
   margin-bottom: 0.8rem;
