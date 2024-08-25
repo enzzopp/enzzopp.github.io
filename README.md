@@ -10,7 +10,7 @@
 [![Portfolio](https://img.shields.io/badge/Visite%20o%20Portfólio-8A2BE2)](https://enzzopp.github.io)
 
 <p align="left">
-  🖱️ Linguagens: Desenvolvido puramente em HTML, CSS e Javascript.
+  🖱️ Desenvolvido puramente em HTML, CSS e Javascript.
 </p>
 
 <p align="left">
